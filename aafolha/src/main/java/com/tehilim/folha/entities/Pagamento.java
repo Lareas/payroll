@@ -1,4 +1,4 @@
-package com.tehilim.aafunc.entities;
+package com.tehilim.folha.entities;
 
 import java.io.Serializable;
 

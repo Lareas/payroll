@@ -1,4 +1,4 @@
-package com.tehilim.aafunc;
+package com.tehilim.folha;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.tehilim.aafunc.resources;
+package com.tehilim.folha.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tehilim.aafunc.entities.Pagamento;
-import com.tehilim.aafunc.services.PagamentoService;
+import com.tehilim.folha.entities.Pagamento;
+import com.tehilim.folha.services.PagamentoService;
 
 @RestController
 @RequestMapping(value = "/pagto")
