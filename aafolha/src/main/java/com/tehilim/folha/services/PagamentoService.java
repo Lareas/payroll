@@ -10,22 +10,17 @@ import org.springframework.web.client.RestTemplate;
 
 import com.tehilim.folha.entities.Func;
 import com.tehilim.folha.entities.Pagamento;
+import com.tehilim.folha.feignclients.FuncFeignClient;
 
 @Service
 public class PagamentoService {
 
-	@Value("${aafunc.host}")
-	private String funcHost;
-	
 	@Autowired
-	private RestTemplate restTemplate;
+	private FuncFeignClient funcFeignClient;
 	
 	public Pagamento getPagamento(long funcId, int days) {
-		Map<String, String> uriVaribles = new HashMap<>();
-		uriVaribles.put("id", ""+funcId);
 		
-		Func func = restTemplate.getForObject(funcHost + "/funcs/{id}", Func.class, uriVaribles);
-		
+		Func func = funcFeignClient.findById(funcId).getBody();
 		return new Pagamento(func.getName(), func.getDailyIncome(), days);
 	}
 }
