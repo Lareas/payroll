@@ -10,7 +10,7 @@ import com.tehilim.folha.entities.Func;
 
 
 @Component
-@FeignClient(name = "aafunc", url = "localhost:8001", path = "/funcs")
+@FeignClient(name = "aafunc", path = "/funcs")
 public interface FuncFeignClient {
 	
 	@GetMapping(value = "/{id}")
